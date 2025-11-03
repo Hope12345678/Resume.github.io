@@ -6,6 +6,7 @@
   --bg:#f7f7fb;
   --card:#ffffff;
   --accent:#0b5cff;
+  --ring: rgba(11,92,255,0.12);
   --muted:#6b7280;
   --text:#0b1220;
 }
@@ -19,6 +20,7 @@
   --accent:#58a6ff;
   --muted:#9aa6b2;
   --text:#e6eef6;
+  --ring: rgba(88,166,255,0.18);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,7 +47,7 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;transition:
 .site-header{background:linear-gradient(90deg,rgba(11,92,255,0.06),rgba(88,166,255,0.03));padding:36px 0 20px;border-bottom:1px solid rgba(0,0,0,0.04)}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .profile{display:flex;align-items:center;gap:14px}
-.avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#6ad1ff);display:block;overflow:hidden;flex:0 0 56px;box-shadow:0 6px 18px rgba(11,92,255,0.12)}
+.avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#6ad1ff);display:block;overflow:hidden;flex:0 0 56px;border:3px solid var(--card);box-shadow:0 6px 18px rgba(2,6,23,0.06), 0 0 0 6px var(--ring);transition:box-shadow .18s,transform .18s}
 .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .name{margin:0;font-size:26px;letter-spacing:-0.2px}
 .tagline{margin:6px 0 12px;color:var(--muted)}
@@ -65,6 +67,11 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;transition:
 .skill-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:12px 0}
 .skill-list li{background:linear-gradient(90deg,rgba(11,92,255,0.12),rgba(88,166,255,0.06));padding:8px 12px;border-radius:999px;font-size:14px;color:var(--text);font-weight:600}
 .skill-list li:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(11,92,255,0.06)}
+
+/* Badges (used for Mensa membership, etc.) */
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;text-decoration:none;color:var(--text);background:linear-gradient(90deg,rgba(11,92,255,0.06),rgba(88,166,255,0.03));border:1px solid rgba(11,92,255,0.06);transition:transform .12s,box-shadow .12s}
+.badge:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(11,92,255,0.06)}
+.badge.membership{background:linear-gradient(90deg,rgba(255,230,180,0.08),rgba(255,245,220,0.04));border-color:rgba(255,200,80,0.12);color:var(--text)}
 
 .site-footer{padding:18px 0;color:var(--muted);text-align:center}
 
